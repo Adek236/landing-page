@@ -1,0 +1,65 @@
+.nav-bar {
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+.nav-bar .nav-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.3rem;
+}
+.nav-bar .nav-mobile a {
+  display: flex;
+  align-items: center;
+}
+.nav-bar .nav-mobile div {
+  display: flex;
+}
+.nav-bar .nav-mobile div:nth-child(2) svg {
+  font-size: 3rem;
+}
+.nav-bar .nav-mobile div:nth-child(3) svg:hover {
+  cursor: pointer;
+}
+@media (min-width: 993px) {
+  .nav-bar .nav-mobile {
+    display: none;
+  }
+}
+.nav-bar .nav-desktop {
+  display: none;
+  width: 100%;
+}
+.nav-bar .nav-desktop > div {
+  padding-left: 4rem;
+}
+.nav-bar .nav-desktop > div svg {
+  font-size: 3rem;
+}
+.nav-bar .nav-desktop > ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4rem;
+  width: 100%;
+}
+.nav-bar .nav-desktop > ul > li {
+  margin-inline: 0.5rem;
+  padding: 0.3rem;
+  list-style-type: none;
+}
+.nav-bar .nav-desktop > ul > li > a {
+  letter-spacing: 0.1rem;
+}
+.nav-bar .nav-desktop > ul > li:nth-last-child(1) svg {
+  font-size: 1rem;
+}
+@media (min-width: 993px) {
+  .nav-bar .nav-desktop {
+    display: flex;
+  }
+}/*# sourceMappingURL=Navigation.css.map */
