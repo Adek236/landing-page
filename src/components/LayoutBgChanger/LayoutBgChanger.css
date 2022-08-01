@@ -1,0 +1,18 @@
+.bg-changer {
+  width: 100%;
+  background-color: rgb(235, 240, 243);
+}
+.bg-changer::before {
+  content: "";
+  display: block;
+  height: 5rem;
+  width: 100%;
+  background: linear-gradient(180deg, white 20%, rgba(235, 240, 243, 0.8) 80%);
+}
+.bg-changer::after {
+  content: "";
+  display: block;
+  height: 5rem;
+  width: 100%;
+  background: linear-gradient(0deg, white 20%, rgba(235, 240, 243, 0.8) 80%);
+}/*# sourceMappingURL=LayoutBgChanger.css.map */

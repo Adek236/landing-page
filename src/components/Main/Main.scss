@@ -1,0 +1,37 @@
+@import "../../assets/styles/Variables.scss";
+
+.main {
+  // background-color: aquamarine;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 75%;
+  width: 100%;
+  @media (min-width: $newsBreakPointSmall) {
+    width: 80%;
+  }
+  &__section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    @media (min-width: $newsBreakPointSmall) {
+      flex-direction: row;
+    }
+    &__desc {
+      &__prev-title {
+        font-size: 3rem;
+        line-height: 2.5rem;
+      }
+      > h1 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+      }
+      &__slider {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
