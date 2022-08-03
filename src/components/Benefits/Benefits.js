@@ -3,7 +3,7 @@ import "./Benefits.css";
 const Benefits = () => {
   return (
     <div className="benefits flex-center">
-      <section>
+      <section id="news">
         <ul >
           <li>
             <div>Icon</div>

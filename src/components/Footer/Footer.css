@@ -1,4 +1,19 @@
-footer {
-  background-color: rgb(221, 187, 187);
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 10rem;
   width: 100%;
+  background-color: rgb(235, 240, 243);
+}
+.footer::before {
+  content: "";
+  display: block;
+  height: 3rem;
+  width: 100%;
+  background: linear-gradient(180deg, white 20%, rgba(235, 240, 243, 0.8) 80%);
+}
+.footer__socials > * ul {
+  display: flex;
 }/*# sourceMappingURL=Footer.css.map */

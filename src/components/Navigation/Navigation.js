@@ -50,7 +50,7 @@ function NavBar({ setShowModal }) {
             </a>
           </li>
           <li>
-            <a href="/" className="text-shadow">
+            <a href="#news" className="text-shadow">
               NEWS
             </a>
           </li>
