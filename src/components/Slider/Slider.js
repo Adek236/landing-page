@@ -1,13 +1,15 @@
 import "./Slider.css";
+import Headline from "../Headline/Headline";
 
 const Slider = () => {
   return (
     <div className="slider flex-center">
       <section>
-        <div className="slider__section__desc flex-center">
-          <h2>Slider content</h2>
-          <p>Slider content</p>
-        </div>
+        <Headline
+          classStyle="slider__section__desc flex-center"
+          title="Slider content"
+          desc="Slider content"
+        />
         <div className="slider__section__news flex-center">
           <ul className="flex-center">
             <li>

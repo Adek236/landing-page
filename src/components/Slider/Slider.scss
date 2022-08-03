@@ -3,6 +3,9 @@
 .slider {
   flex-direction: column;
   width: 100%;
+  @media (min-width: $newsBreakPointSmall) {
+    padding: 0 10%;
+  }
   &__section__desc {
     padding: 2rem 0;
     flex-direction: column;

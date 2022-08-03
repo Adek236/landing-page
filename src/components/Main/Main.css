@@ -5,11 +5,6 @@
   min-height: 75%;
   width: 100%;
 }
-@media (min-width: 615px) {
-  .main {
-    width: 80%;
-  }
-}
 .main__section__container {
   display: flex;
   flex-direction: column;
@@ -20,6 +15,7 @@
 @media (min-width: 615px) {
   .main__section__container {
     flex-direction: row;
+    padding: 0 10%;
   }
 }
 .main__section__container__desc__prev-title {

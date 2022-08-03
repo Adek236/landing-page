@@ -1,0 +1,10 @@
+@import "../../assets/styles/Variables.scss";
+
+.headline {
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 3rem 0;
+    @media (min-width: $newsBreakPointSmall) {
+        padding: 3rem 10%;
+      }
+}

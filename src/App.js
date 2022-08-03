@@ -5,6 +5,8 @@ import Navigation from "./components/Navigation/Navigation";
 import Main from "./components/Main/Main";
 import Slider from "./components/Slider/Slider";
 import Offer from "./components/Offer/Offer";
+import Headline from "./components/Headline/Headline";
+import Box from "./components/Box/Box";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -19,27 +21,11 @@ function App() {
           <Offer />
           <Offer />
           <Offer />
+          <Headline title="Headline content" desc="Headline content" />
         </LayoutBgChanger>
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
-        Hello World <br />
+        <Box>
+          <Offer />
+        </Box>
       </Main>
       <Footer />
     </Layout>

@@ -1,0 +1,10 @@
+.headline {
+  flex-direction: column;
+  font-size: 2rem;
+  padding: 3rem 0;
+}
+@media (min-width: 615px) {
+  .headline {
+    padding: 3rem 10%;
+  }
+}/*# sourceMappingURL=Headline.css.map */

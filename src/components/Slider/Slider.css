@@ -2,6 +2,11 @@
   flex-direction: column;
   width: 100%;
 }
+@media (min-width: 615px) {
+  .slider {
+    padding: 0 10%;
+  }
+}
 .slider__section__desc {
   padding: 2rem 0;
   flex-direction: column;
