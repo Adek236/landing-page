@@ -6,14 +6,4 @@
   .slider {
     padding: 0 10%;
   }
-}
-.slider__section__desc {
-  padding: 2rem 0;
-  flex-direction: column;
-}
-.slider__section__desc > h2 {
-  font-size: 2.5rem;
-}
-.slider__section__desc > p {
-  font-size: 1.3rem;
 }/*# sourceMappingURL=Slider.css.map */

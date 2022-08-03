@@ -4,9 +4,10 @@ const Headline = ({ classStyle, title, desc }) => {
     <div
       className={classStyle === undefined ? "headline flex-center" : classStyle}
     >
-      {console.log("el ", classStyle)}
-      <h2>{title}</h2>
-      <p>{desc}</p>
+      <section className="flex-center">
+        <h2>{title}</h2>
+        <p>{desc}</p>
+      </section>
     </div>
   );
 };

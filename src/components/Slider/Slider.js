@@ -1,16 +1,10 @@
 import "./Slider.css";
-import Headline from "../Headline/Headline";
 
 const Slider = () => {
   return (
     <div className="slider flex-center">
-      <section>
-        <Headline
-          classStyle="slider__section__desc flex-center"
-          title="Slider content"
-          desc="Slider content"
-        />
         <div className="slider__section__news flex-center">
+        <section>
           <ul className="flex-center">
             <li>
               <h3>Slider content</h3>
@@ -31,8 +25,8 @@ const Slider = () => {
               <div>Slider content</div>
             </li>
           </ul>
-        </div>
       </section>
+        </div>
     </div>
   );
 };

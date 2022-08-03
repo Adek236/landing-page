@@ -7,6 +7,7 @@ import Slider from "./components/Slider/Slider";
 import Offer from "./components/Offer/Offer";
 import Headline from "./components/Headline/Headline";
 import Box from "./components/Box/Box";
+import Benefits from "./components/Benefits/Benefits";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Navigation />
       </Header>
       <Main>
+        <Headline title="Headline content" desc="Headline content" />
         <Slider />
         <LayoutBgChanger>
           <Offer />
@@ -26,6 +28,7 @@ function App() {
         <Box>
           <Offer />
         </Box>
+        <Benefits/>
       </Main>
       <Footer />
     </Layout>
