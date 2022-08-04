@@ -1,5 +1,6 @@
 import "./Main.css";
-// import beachBackground from "../../assets/images/beach2.mp4";
+import beachBackground2 from "../../assets/images/beach2.mp4";
+// import beachBackground from "../../assets/images/beach3.jpg";
 
 const Main = ({ children }) => {
   return (
@@ -8,25 +9,24 @@ const Main = ({ children }) => {
       // style={{ backgroundImage: `url(${beachBackground})` }}
       >
         
-        <div className="main__section__container">
-          <div className="main__section__container__desc">
-            <div className="main__section__container__desc__prev-title">
-              Main content
-            </div>
-            <h1>Main content</h1>
-            <div className="main__section__container__desc__slider">
-              Main content
-            </div>
-          </div>
-          <div className="main__section__container__image">Graphics</div>
-        </div>
-      </section>
-      {/* <video className="videobg" autoPlay loop muted>
+      <video className="videobg" autoPlay loop muted>
           <source
-            src={beachBackground}
+            src={beachBackground2}
             type="video/mp4"
           />
-        </video> */}
+        </video>
+        <div className="main__section__container">
+          <div className="main__section__container__desc flex-center">
+            <div className="main__section__container__desc__prev-title text-shadow">
+              Hello, travelers!
+            </div>
+            <h1>Welcome</h1>
+            <div className="main__section__container__desc__slider text-shadow">
+              to start your journey
+            </div>
+          </div>
+        </div>
+      </section>
       {children}
     </main>
   );

@@ -1,6 +1,9 @@
 @import "../../assets/styles/Variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 *,
 *::before,
 *::after {
@@ -14,6 +17,7 @@
   min-height: 100vh;
   // background: $bgColorPriority;
   font-family: $mainFont;
+  // letter-spacing: 0.1rem;
   font-weight: 400;
   line-height: 1.5;
   width: 100%;
@@ -32,14 +36,14 @@
   right: 0;
 }
 
-// h1,
-// h2,
-// h3,
-// p,
-// svg,
-// .text-shadow {
-//   text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, 0.8);
-// }
+h1,
+h2,
+h3,
+p,
+svg,
+.text-shadow {
+  text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, 1);
+}
 
 a {
   text-decoration: none;

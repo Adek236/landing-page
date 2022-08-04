@@ -7,28 +7,51 @@
   flex-direction: column;
   min-height: 75%;
   width: 100%;
+  > section {
+    background-position: right;
+    background-size: cover;
+    > video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+  }
   &__section__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
+    color: white;
     @media (min-width: $newsBreakPointSmall) {
       flex-direction: row;
       padding: 0 10%;
     }
     &__desc {
+      flex-direction: column;
+      padding-bottom: 7rem;
       &__prev-title {
-        font-size: 3rem;
+        font-size: 2.8rem;
         line-height: 2.5rem;
+        // font-weight: 600;
+        font-family: 'Permanent Marker', cursive;
+        text-align: center;
       }
       > h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         text-transform: uppercase;
+        font-weight: 900;
       }
       &__slider {
         text-transform: uppercase;
-        font-size: 1.2rem;
+        font-size: 1.7rem;
+        // font-weight: 600;
+        font-family: 'Luckiest Guy', cursive;
+        letter-spacing: 0.1rem;
+        text-align: center;
       }
     }
   }
