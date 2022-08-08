@@ -1,19 +1,37 @@
+import { useState, useEffect, useRef } from "react";
 import "./Main.css";
-import beachBackground2 from "../../assets/images/beach2.mp4";
-// import beachBackground from "../../assets/images/beach3.jpg";
+import { useWindowWidth } from "../../controllers/controllers";
+import videoBeachBackground from "../../assets/images/beach2.mp4";
+import beachBackground from "../../assets/images/beach3.jpg";
 
 const Main = ({ children }) => {
+  const [slideNum, setSlideNum] = useState(1);
+  const mainRef = useRef(null);
+  const { windowWidth, windowHeight } = useWindowWidth(mainRef);
+
+  useEffect(() => {
+    let mainSlider = setInterval(() => {
+      console.log("tik tok");
+      setSlideNum((prev) => {
+        if (prev === 1) return (prev = 2);
+        if (prev === 2) return (prev = 1);
+      });
+    }, 5000);
+    return () => clearInterval(mainSlider);
+  });
+
   return (
-    <main className="main">
-      <section 
-      // style={{ backgroundImage: `url(${beachBackground})` }}
-      >
-        
-      <video className="videobg" autoPlay loop muted>
-          <source
-            src={beachBackground2}
-            type="video/mp4"
-          />
+    <main ref={mainRef} className="main">
+      {console.log("width = " + windowWidth, " height = ", windowHeight)}
+      {console.log(windowWidth / windowHeight)}
+      <section style={{ backgroundImage: `url(${windowWidth >= 1200 && (windowWidth / windowHeight) <= 1.95 ? "" : beachBackground})` }}>
+        <video
+          style={{ display: `${windowWidth >= 1200 && (windowWidth / windowHeight) <= 1.95 ? "flex": "none"}` }}
+          autoPlay
+          loop
+          muted
+        >
+          <source src={videoBeachBackground} type="video/mp4" />
         </video>
         <div className="main__section__container">
           <div className="main__section__container__desc flex-center">
@@ -22,7 +40,25 @@ const Main = ({ children }) => {
             </div>
             <h1>Welcome</h1>
             <div className="main__section__container__desc__slider text-shadow">
-              to start your journey
+              <div
+                className={
+                  slideNum === 1
+                    ? "main__section__container__desc__slider--show"
+                    : "main__section__container__desc__slider--hide"
+                }
+              >
+                to start your journey
+              </div>
+              <div
+                className={
+                  slideNum === 2
+                    ? "main__section__container__desc__slider--show"
+                    : "main__section__container__desc__slider--hide"
+                }
+              >
+                to adventures
+              </div>
+              {/* to explore world */}
             </div>
           </div>
         </div>
