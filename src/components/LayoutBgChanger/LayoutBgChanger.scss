@@ -1,6 +1,7 @@
 .bg-changer {
    width: 100%;
    background-color: rgb(235, 240, 243);
+   padding-inline: 0.5rem;
    &::before {
     content: "";
     display: block;

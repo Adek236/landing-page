@@ -11,7 +11,11 @@ const Main = ({ children }) => {
   const { windowWidth } = useWindowWidth(mainRef);
   const { windowHeight } = useWindowWidth(sectionRef);
   const isVideoWindow =
-    windowWidth >= 1200 && windowWidth / windowHeight <= 1.91 && windowWidth / windowHeight >= 1.6 ? true : false;
+    windowWidth >= 1200 &&
+    windowWidth / windowHeight <= 1.91 &&
+    windowWidth / windowHeight >= 1.6
+      ? true
+      : false;
 
   useEffect(() => {
     let mainSlider = setInterval(() => {
@@ -51,7 +55,7 @@ const Main = ({ children }) => {
             <div className="main__section__container__desc__prev-title text-shadow">
               Hello, travelers!
             </div>
-            <h1>Welcome</h1>
+            <h1 className="text-shadow">Welcome</h1>
             <div className="main__section__container__desc__slider text-shadow">
               <div
                 className={

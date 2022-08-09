@@ -17,9 +17,13 @@ function App() {
         <Navigation />
       </Header>
       <Main>
-        <Headline title="Headline content" desc="Headline content" />
+        <Headline
+          title="Get swept up in the adventure"
+          desc="What our travelers say about us."
+        />
         <Slider />
         <LayoutBgChanger>
+          Top destinations:
           <Offer />
           <Offer />
           <Offer />
@@ -28,7 +32,7 @@ function App() {
         <Box>
           <Offer />
         </Box>
-        <Benefits/>
+        <Benefits />
       </Main>
       <Footer />
     </Layout>
