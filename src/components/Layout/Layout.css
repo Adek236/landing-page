@@ -47,4 +47,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+h2 {
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: 0.1rem;
+  text-align: center;
 }/*# sourceMappingURL=Layout.css.map */

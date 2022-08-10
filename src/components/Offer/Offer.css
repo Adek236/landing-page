@@ -34,7 +34,8 @@
 }
 .offer__section__desc {
   flex-direction: column;
-  padding: 1rem;
+  padding: 1.5rem;
+  text-align: center;
 }
 @media (min-width: 993px) {
   .offer__section__desc {

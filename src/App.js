@@ -24,13 +24,13 @@ function App() {
         <Slider />
         <LayoutBgChanger>
           Top destinations:
-          <Offer />
-          <Offer />
-          <Offer />
-          <Headline title="Headline content" desc="Headline content" />
+          <Offer id="0"/>
+          <Offer id="1"/>
+          <Offer id="2"/>
+          <Headline title="Join to ours surfing academy!" desc="Worldwide academy, guarantee of great fun. We will teach you everything." />
         </LayoutBgChanger>
         <Box>
-          <Offer />
+          {/* <Offer /> */}
         </Box>
         <Benefits />
       </Main>
