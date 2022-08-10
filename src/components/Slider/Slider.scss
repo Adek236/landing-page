@@ -1,10 +1,49 @@
 @import "../../assets/styles/Variables.scss";
 
 .slider {
-  flex-direction: column;
   width: 100%;
   @media (min-width: $newsBreakPointSmall) {
-    padding: 0 10%;
+      padding: 0 10%;
+    }
+    > section {
+      display: flex;
+      width: 100%;
+      .slider__btn {
+        min-width: 10%;
+        background-color: aqua;
+      }
+      > ul {
+      display: flex;
+      flex-grow: 1;
+      width: 80%;
+      overflow: scroll;
+      // padding-inline: 5rem;
+      > li {
+        height: 350px;
+        min-width: 14.5rem;
+        border: 1px solid red;
+        margin-inline: 1rem;
+      }
+    }
+  }
+  > nav {
+    width: 100%;
+    > ul {
+      height: 2rem;
+      > li {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 1rem;
+        border: 1px solid rgb(0, 0, 0, 0.5);
+        margin-inline: 0.1rem;
+        &:hover {
+          cursor: pointer;
+        }
+        &.active {
+          background-color: rgba(128, 128, 128, 0.6);
+        }
+      }
+    }
   }
 }
  

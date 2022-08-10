@@ -2,6 +2,8 @@
   width: 100%;
 }
 .box__content {
+  background-position: center;
+  background-size: cover;
   height: 15rem;
   width: 60%;
   background-color: rgb(255, 255, 255);

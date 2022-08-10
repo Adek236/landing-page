@@ -1,1 +1,1 @@
-{"version":3,"sources":["Headline.scss","Headline.css"],"names":[],"mappings":"AAEA;EACE,iBAAA;EACA,eAAA;ACDF;ADEE;EACE,sBAAA;ACAJ;ADMI;EACE,yBAAA;ACJN;ADOE;EAdF;IAeI,iBAAA;ECJF;AACF","file":"Headline.css"}
+{"version":3,"sources":["Headline.scss","Headline.css"],"names":[],"mappings":"AAEA;EACE,iBAAA;EACA,eAAA;ACDF;ADEE;EACE,sBAAA;ACAJ;ADMI;EACE,kBAAA;EACA,yBAAA;ACJN;ADOE;EAfF;IAgBI,iBAAA;ECJF;AACF","file":"Headline.css"}

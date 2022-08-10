@@ -29,8 +29,6 @@ const Main = ({ children }) => {
 
   return (
     <main ref={mainRef} className="main">
-      {console.log("width = " + windowWidth, " height = ", windowHeight)}
-      {console.log(windowWidth / windowHeight)}
       <section
         ref={sectionRef}
         style={{

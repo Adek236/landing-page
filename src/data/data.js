@@ -1,4 +1,3 @@
-import fall from "../assets/images/fall.jpg";
 import mountains from "../assets/images/mountains.jpg";
 import palms from "../assets/images/palms.jpg";
 import lake from "../assets/images/lake.jpg";
