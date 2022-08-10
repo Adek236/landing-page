@@ -1,5 +1,5 @@
 import "./Offer.css";
-import { offer as data } from "../../data/data";
+import { offers as data } from "../../data/data";
 
 const Offer = ({ id }) => {
   return (

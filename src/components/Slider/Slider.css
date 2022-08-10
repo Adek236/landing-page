@@ -12,22 +12,58 @@
 }
 .slider > section .slider__btn {
   min-width: 10%;
-  background-color: aqua;
+}
+.slider > section .slider__btn > svg {
+  display: none;
+  font-size: 3rem;
+  color: gray;
+}
+@media (min-width: 1280px) {
+  .slider > section .slider__btn > svg {
+    display: inline-block;
+  }
+}
+.slider > section .slider__btn > svg:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 .slider > section > ul {
   display: flex;
   flex-grow: 1;
   width: 80%;
-  overflow: scroll;
+  overflow: hidden;
+  padding: 0.5rem;
 }
 .slider > section > ul > li {
+  flex-direction: column;
   height: 350px;
-  min-width: 14.5rem;
-  border: 1px solid red;
+  min-width: 14.6rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.2);
   margin-inline: 1rem;
+}
+@media (min-width: 1280px) {
+  .slider > section > ul > li {
+    min-width: 30.5%;
+  }
+}
+.slider > section > ul > li > p {
+  color: rgba(0, 0, 0, 0.7);
+}
+.slider > section > ul > li > * svg {
+  font-size: 0.9rem;
+}
+.slider > section > ul > li .slider__author {
+  font-size: 0.9rem;
 }
 .slider > nav {
   width: 100%;
+}
+@media (min-width: 1280px) {
+  .slider > nav {
+    display: none;
+  }
 }
 .slider > nav > ul {
   height: 2rem;

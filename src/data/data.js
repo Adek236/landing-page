@@ -2,7 +2,7 @@ import mountains from "../assets/images/mountains.jpg";
 import palms from "../assets/images/palms.jpg";
 import lake from "../assets/images/lake.jpg";
 
-export const offer = [
+export const offers = [
   {
     id: 0,
     title: "Jamaica",
@@ -20,5 +20,50 @@ export const offer = [
     title: "Zakynathos, Greece",
     desc: "Thanks to its climate, Zakynthos is an ideal vacation destination for young children. Geological changes caused by earthquakes in ancient times have made the island largely forested and mountainous. The western coastline is composed of high cliffs, picturesque coves and caves.",
     img: mountains,
+  },
+];
+
+export const comments = [
+  {
+    id: 0,
+    title: "Very nice",
+    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    stars: 5,
+    author: "Camil"
+  },
+  {
+    id: 1,
+    title: "Very nice",
+    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    stars: 5,
+    author: "Camil"
+  },
+  {
+    id: 2,
+    title: "Very nice",
+    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    stars: 5,
+    author: "Camil"
+  },
+  {
+    id: 3,
+    title: "Very nice",
+    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    stars: 5,
+    author: "Camil"
+  },
+  {
+    id: 4,
+    title: "Very nice",
+    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    stars: 5,
+    author: "Camil"
+  },
+  {
+    id: 5,
+    title: "Very nice",
+    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    stars: 5,
+    autor: "Camil"
   },
 ];
