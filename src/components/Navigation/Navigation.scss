@@ -72,7 +72,9 @@
         padding: 0.3rem;
         list-style-type: none;
         > a {
-          letter-spacing: 0.1rem;
+          letter-spacing: 0.05rem;
+          font-size: 0.9rem;
+          font-family: "Luckiest Guy", cursive;
           &:hover {
             // color: $hoverColorPriority;
           }

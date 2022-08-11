@@ -25,7 +25,7 @@ const Slider = () => {
         <ul>
           {data.map((data) => {
             return (
-              <li key={data.id} className="flex-center">
+              <li id={data.id} key={data.id} className="flex-center">
                 <h3>{data.title}</h3>
                 <p>"{data.desc}"</p>
                 <div className="slider__stars">
@@ -43,7 +43,7 @@ const Slider = () => {
       <nav>
         <ul className="flex-center">
           {Array.from({ length: 6 }).map((el, index) => {
-            return <li key={index} className="slider__dots"></li>;
+            return <li key={index} className="slider__dots"><a href="#4">a</a></li>;
           })}
         </ul>
       </nav>

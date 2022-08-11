@@ -45,27 +45,27 @@ function NavBar({ setShowModal }) {
         </div>
         <ul>
           <li>
-            <a href="/" className="text-shadow">
-              HOME
+            <a href="#top">
+              TOP
             </a>
           </li>
           <li>
-            <a href="#news" className="text-shadow">
-              NEWS
+            <a href="/">
+              LAST MINUTE
             </a>
           </li>
           <li>
-            <a href="/" className="text-shadow">
-              GUIDES
+            <a href="#academy">
+            ACADEMY
             </a>
           </li>
           <li>
-            <a href="/" className="text-shadow">
-              OFFERS
+            <a href="#comments">
+              COMMENTS
             </a>
           </li>
           <li>
-            <a href="/" className="text-shadow flex-center">
+            <a href="/" className="flex-center">
               LOGIN <PersonIcon />
             </a>
           </li>

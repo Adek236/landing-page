@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  
+}
+
 .container {
   position: relative;
   min-height: 100vh;
