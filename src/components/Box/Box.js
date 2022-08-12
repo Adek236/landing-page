@@ -11,7 +11,7 @@ const Box = ({ children }) => {
         }}
         className="box__content flex-center"
       >
-        {children}
+        <div className="box__children">{children}</div>
       </div>
     </div>
   );

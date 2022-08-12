@@ -40,12 +40,12 @@
   min-width: 14.6rem;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
   margin-inline: 1rem;
 }
 @media (min-width: 1280px) {
   .slider > section > ul > li {
-    min-width: 30.5%;
+    min-width: 31%;
     padding-inline: 3rem;
   }
 }

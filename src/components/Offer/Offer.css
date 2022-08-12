@@ -26,11 +26,20 @@
   height: 300px;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
+  position: relative;
 }
 @media (min-width: 993px) {
   .offer__section__image {
     width: 50%;
   }
+}
+.offer__section__image__children {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
 }
 .offer__section__desc {
   flex-direction: column;

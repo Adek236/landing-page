@@ -11,7 +11,8 @@ import Box from "./components/Box/Box";
 import Benefits from "./components/Benefits/Benefits";
 import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
-import { textStyle } from "./assets/styles/Variables";
+import Button from "./components/Button/Button"
+import { textStyle, buttonBoxStyle } from "./assets/styles/Variables";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -30,13 +31,19 @@ function App() {
         <Slider />
         <LayoutBgChanger>
           <div style={textStyle}>Top destinations:</div>
-          <Offer id="0"/>
-          <Offer id="1"/>
-          <Offer id="2"/>
+          <Offer id="0">
+            <Button title="Sign in" position="vertical"/>
+          </Offer>
+          <Offer id="1">
+            <Button title="Sign in" position="vertical"/>
+          </Offer>
+          <Offer id="2">
+            <Button title="Sign in" position="vertical"/>
+          </Offer>
           <Headline id="academy" title="Join to ours surfing academy!" desc="Worldwide academy, guarantee of great fun. We will teach you everything." />
         </LayoutBgChanger>
         <Box>
-          {/* <Offer /> */}
+          <Button title="Sign in"/>
         </Box>
         <Benefits />
       </Main>

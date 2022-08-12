@@ -12,7 +12,7 @@ const Main = ({ children }) => {
   const { windowHeight } = useWindowWidth(sectionRef);
   const isVideoWindow =
     windowWidth >= 1200 &&
-    windowWidth / windowHeight <= 1.91 &&
+    windowWidth / windowHeight <= 2.1 &&
     windowWidth / windowHeight >= 1.6
       ? true
       : false;
@@ -35,6 +35,12 @@ const Main = ({ children }) => {
           backgroundImage: `url(${isVideoWindow ? "" : beachBackground})`,
           boxShadow: `${
             isVideoWindow ? "none" : "0px 1px 10px 0px rgba(0, 0, 0, 0.8)"
+          }`,
+          marginBottom: `${
+            windowWidth / windowHeight >= 1.85 &&
+            windowWidth / windowHeight <= 2.1
+              ? "8rem"
+              : ""
           }`,
         }}
       >

@@ -3,10 +3,12 @@
 .box {
   width: 100%;
   &__content {
+    position: relative;
     background-position: center;
     background-size: cover;
-    height: 15rem;
+    height: 17rem;
     width: 80%;
+    overflow: hidden;
     background-color: $bgColorPriority;
     border-radius: 1rem;
     transform: translateY(-6rem);
@@ -14,5 +16,11 @@
     @media (min-width: $newsBreakPointSmall) {
       width: 60%;
     }
+  }
+  &__children {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
   }
 }

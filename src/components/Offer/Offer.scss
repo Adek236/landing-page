@@ -1,12 +1,12 @@
 @import "../../assets/styles/Variables.scss";
 
 .offer {
- width: 100%;
- padding: 4rem 0;
- @media (min-width: $newsBreakPointSmall) {
-   padding: 4rem 10%;
- }
- &__section { 
+  width: 100%;
+  padding: 4rem 0;
+  @media (min-width: $newsBreakPointSmall) {
+    padding: 4rem 10%;
+  }
+  &__section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,17 +22,26 @@
       height: 300px;
       background-position: center;
       background-size: cover;
+      overflow: hidden;
+      position: relative;
       @media (min-width: $newsBreakPointMedium) {
-         width: 50%;
-       }
+        width: 50%;
+      }
+      &__children {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+      }
     }
     &__desc {
-       flex-direction: column;
-       padding: 1.5rem;
-       text-align: center;
-       @media (min-width: $newsBreakPointMedium) {
-         width: 50%;
-       }
+      flex-direction: column;
+      padding: 1.5rem;
+      text-align: center;
+      @media (min-width: $newsBreakPointMedium) {
+        width: 50%;
+      }
     }
- }
+  }
 }
