@@ -4,6 +4,11 @@ import PersonIcon from "@mui/icons-material/Person";
 import "./Navigation.css";
 
 function NavBar({ setShowModal }) {
+
+  const toggleShowModal = () => {
+    setShowModal(prev => !prev);
+  }
+
   return (
     <div className="nav-bar">
       <nav aria-label="Primary mobile" className="nav-mobile">
@@ -21,7 +26,7 @@ function NavBar({ setShowModal }) {
           role="button"
           aria-label="Open modal"
           tabIndex="0"
-          // onClick={() => setShowModal(true)}
+          onClick={() => toggleShowModal()}
           // onKeyDown={(e) => {
           //   if (e.key === "Enter") {
           //     setShowModal(true);

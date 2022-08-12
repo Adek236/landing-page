@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Layout from "./components/Layout/Layout";
 import LayoutBgChanger from "./components/LayoutBgChanger/LayoutBgChanger";
 import Header from "./components/Header/Header";
@@ -9,13 +10,16 @@ import Headline from "./components/Headline/Headline";
 import Box from "./components/Box/Box";
 import Benefits from "./components/Benefits/Benefits";
 import Footer from "./components/Footer/Footer";
+import Modal from "./components/Modal/Modal";
 import { textStyle } from "./assets/styles/Variables";
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <Layout>
+      <Modal showModal={showModal} setShowModal={setShowModal} />
       <Header>
-        <Navigation />
+        <Navigation setShowModal={setShowModal} />
       </Header>
       <Main>
         <Headline
