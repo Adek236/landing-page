@@ -1,7 +1,6 @@
 @import "../../assets/styles/Variables.scss";
 
 .main {
-  // background-color: aquamarine;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -24,7 +23,7 @@
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
-    color: white;
+    color: $bgColorPriority;
     @media (min-width: $newsBreakPointSmall) {
       flex-direction: row;
       padding: 0 10%;
@@ -36,8 +35,7 @@
       &__prev-title {
         font-size: 2.8rem;
         line-height: 2.5rem;
-        // font-weight: 600;
-        font-family: "Permanent Marker", cursive;
+        font-family: $mainPrevTitleFont;
         text-align: center;
         @media (min-width: $newsBreakPointLarge) {
           font-size: 4rem;
@@ -53,11 +51,9 @@
       }
       &__slider {
         position: relative;
-        // display: flex;
         text-transform: uppercase;
         font-size: 1.7rem;
-        // font-weight: 600;
-        font-family: "Luckiest Guy", cursive;
+        font-family: $mainTitleFont;
         letter-spacing: 0.1rem;
         text-align: center;
         overflow: hidden;
@@ -68,7 +64,8 @@
         &--show {
           transform: translateX(0);
           opacity: 1;
-          transition: opacity 500ms, transform 500ms cubic-bezier(0.9, 0, 0.1, 1) 0s;
+          transition: opacity 500ms,
+            transform 500ms cubic-bezier(0.9, 0, 0.1, 1) 0s;
         }
         &--hide {
           position: absolute;

@@ -1,13 +1,12 @@
+import "./Navigation.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import DiamondIcon from "@mui/icons-material/Diamond";
 import PersonIcon from "@mui/icons-material/Person";
-import "./Navigation.css";
 
 function NavBar({ setShowModal }) {
-
   const toggleShowModal = () => {
-    setShowModal(prev => !prev);
-  }
+    setShowModal((prev) => !prev);
+  };
 
   return (
     <div className="nav-bar">
@@ -50,24 +49,16 @@ function NavBar({ setShowModal }) {
         </div>
         <ul>
           <li>
-            <a href="#top">
-              TOP
-            </a>
+            <a href="#top">TOP</a>
           </li>
           <li>
-            <a href="/">
-              LAST MINUTE
-            </a>
+            <a href="/">LAST MINUTE</a>
           </li>
           <li>
-            <a href="#academy">
-            ACADEMY
-            </a>
+            <a href="#academy">ACADEMY</a>
           </li>
           <li>
-            <a href="#comments">
-              COMMENTS
-            </a>
+            <a href="#comments">COMMENTS</a>
           </li>
           <li>
             <a href="/" className="flex-center">

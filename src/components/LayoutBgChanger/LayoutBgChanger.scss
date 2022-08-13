@@ -1,19 +1,20 @@
+@import "../../assets/styles/Variables.scss";
+
 .bg-changer {
    width: 100%;
-   background-color: rgb(235, 240, 243);
-   padding-inline: 0.5rem;
+   background-color: $bgColorSecondary;
    &::before {
     content: "";
     display: block;
     height: 5rem;
     width: 100%;
-    background: linear-gradient(180deg,white 20%,rgba(235, 240, 243,.8) 80%);
+    background: linear-gradient(180deg,$bgColorPriority 20%, $bgColorSecondaryTransparent 80%);
    }
    &::after {
     content: "";
     display: block;
     height: 5rem;
     width: 100%;
-    background: linear-gradient(0deg,white 20%,rgba(235, 240, 243,.8) 80%);
+    background: linear-gradient(0deg,$bgColorPriority 20%, $bgColorSecondaryTransparent 80%);
    }
 }

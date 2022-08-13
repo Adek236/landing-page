@@ -18,7 +18,7 @@
             display: inline-block;
           }
           &:hover {
-            color: rgb(0, 0, 0);
+            color: $mainFontColor;
             cursor: pointer;
           }
         }
@@ -29,14 +29,12 @@
       width: 80%;
       overflow: hidden;
       padding: 0.5rem;
-      // padding-inline: 5rem;
       > li {
         flex-direction: column;
         height: 350px;
         min-width: 14.6rem;
         padding: 1rem;
         text-align: center;
-        // border: 1px solid red;
         box-shadow: 0px 2px 10px 0px rgb(0, 0, 0,0.15);
         margin-inline: 1rem;
         @media (min-width: $newsBreakPointLarge) {
@@ -44,11 +42,10 @@
           padding-inline: 3rem;
         }
         > p {
-          // font-size: 0.9rem;
-          color: rgba(0, 0, 0, 0.7);
+          color: $mainFontColorThird;
         }
         > * svg {
-          // color: yellow;
+          color: $starsColor;
           font-size: 0.9rem;
         }
         .slider__author {
@@ -74,7 +71,7 @@
           cursor: pointer;
         }
         &.active {
-          background-color: rgba(128, 128, 128, 0.6);
+          background-color: $circleBgColor;
         }
       }
     }

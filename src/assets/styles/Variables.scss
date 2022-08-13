@@ -1,22 +1,23 @@
 // Colors
 $bgColorPriority: rgb(255, 255, 255);
-$bgColorSecondary: rgb(221, 187, 187);
+$bgColorSecondary: rgb(235, 240, 243);
+$bgColorSecondaryTransparent: rgb(235, 240, 243, 0.8);
 $mainFontColor: rgb(0, 0, 0);
 $mainFontColorSecondary: rgb(255, 255, 255);
-
-
-// Buttons colors
-$btnColorPrimary: rgb(0, 0, 0, 0.6);
-$btnColorPrimaryHover: rgb(64, 64, 64, 0.65);
-$btnBorderColorPrimary: rgb(64, 64, 64);
-$btnColorSecondary: rgba(255, 255, 255, 0);
-$btnColorSecondaryHover: rgba(255, 255, 255, 0.5);
-$btnBorderColorSecondary: rgb(255, 255, 255);
+$mainFontColorThird: rgba(0, 0, 0, 0.7);
 
 // Fonts
-$mainFontTest: 'Teko', sans-serif;
 $mainFont: "Open Sans", "Arial", "Helvetica", sans-serif;
-$mainTitleFont: "Roboto", "Open Sans", "Arial", "Helvetica", sans-serif;
+$mainTitleFont: "Luckiest Guy", "Open Sans", "Arial", "Helvetica", cursive;
+$mainPrevTitleFont: "Permanent Marker", "Open Sans", "Arial", "Helvetica", cursive;
+
+// Buttons colors
+$btnColorPrimary: rgb(255, 255, 255, 0.6);
+$btnColorPrimaryHover: rgb(255, 255, 255, 1);
+
+// Slider colors
+$starsColor: rgb(0, 217, 255);
+$circleBgColor: rgba(128, 128, 128, 0.6);
 
 // NewsBreakPoint
 $newsBreakPointSmall: 615px;

@@ -5,15 +5,11 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import GoogleIcon from '@mui/icons-material/Google';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-// import fallBackground from "../../assets/images/fall.jpg";
 
-const Footer = ({ children }) => {
+const Footer = () => {
   return (
     <footer 
-    style={{
-      // backgroundImage: `url(${fallBackground})`
-    }}
-    className="footer">
+    className="footer flex-center">
       <div className="footer__nav">
         <div className="footer__nav__copyright">2022 ALL RIGHTS RESERVED.</div>
         <nav aria-label="Third">

@@ -2,6 +2,18 @@ import mountains from "../assets/images/mountains.jpg";
 import palms from "../assets/images/palms.jpg";
 import lake from "../assets/images/lake.jpg";
 
+export const main = [
+  {
+    prevTitle: "Hello, travelers!",
+    title: "Welcome",
+    desc: [
+      "to start your journey",
+      "to adventures",
+      "to explore the world"
+    ]
+  }
+];
+
 export const offers = [
   {
     id: 0,
@@ -26,44 +38,44 @@ export const offers = [
 export const comments = [
   {
     id: 0,
-    title: "Very nice",
-    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    title: "Very well",
+    desc: "I heartily recommend organizing your dream exotic trip. Great, hassle-free contact, both by email and phone. Service at the highest level.",
     stars: 5,
-    author: "Camil"
+    author: "Justin"
   },
   {
     id: 1,
-    title: "Very nice",
-    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    title: "Recomended",
+    desc: "The best travel agency I have used.",
     stars: 5,
-    author: "Camil"
+    author: "Mike"
   },
   {
     id: 2,
-    title: "Very nice",
-    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    title: "Cool",
+    desc: "In good conscience, a travel agency worth recommending! Professional service, at the highest level. Very friendly, constant and trouble-free contact with the representative of the office.",
     stars: 5,
-    author: "Camil"
+    author: "Antonio"
   },
   {
     id: 3,
-    title: "Very nice",
-    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    title: "Professional",
+    desc: "A friendly and professional service, professional advice and putting the customer at the center - I recommend!",
     stars: 5,
-    author: "Camil"
+    author: "Elisabeth"
   },
   {
     id: 4,
-    title: "Very nice",
-    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
-    stars: 5,
-    author: "Camil"
+    title: "Good organization",
+    desc: "I recommend, the tour is perfectly organized. All participants very satisfied.",
+    stars: 4,
+    author: "Alina"
   },
   {
     id: 5,
     title: "Very nice",
-    desc: "That was creazy, best vactation ever, we back next year, bye bye.",
+    desc: "That was crazy, best vactation ever, we will back next year, bye bye.",
     stars: 5,
-    autor: "Camil"
+    author: "Lucian"
   },
 ];
