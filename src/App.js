@@ -12,10 +12,12 @@ import Benefits from "./components/Benefits/Benefits";
 import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
 import Button from "./components/Button/Button"
-import { textStyle, buttonBoxStyle } from "./assets/styles/Variables";
+import Credits from "./components/Credits/Credits";
+import { textStyle } from "./assets/styles/Variables";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const [showCredits, setShowCredits] = useState(false);
   return (
     <Layout>
       <Modal showModal={showModal} setShowModal={setShowModal} />
@@ -47,6 +49,7 @@ function App() {
         </Box>
         <Benefits />
       </Main>
+      <Credits showCredits={showCredits} setShowCredits={setShowCredits} />
       <Footer />
     </Layout>
   );

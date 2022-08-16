@@ -1,5 +1,5 @@
 import "./Box.css";
-import fall from "../../assets/images/fall.jpg";
+// import fall from "../../assets/images/fall.jpg";
 import fall1280 from "../../assets/images/fall1280.jpg";
 
 const Box = ({ children }) => {
