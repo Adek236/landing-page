@@ -26,11 +26,11 @@ function NavBar({ setShowModal }) {
           aria-label="Open modal"
           tabIndex="0"
           onClick={() => toggleShowModal()}
-          // onKeyDown={(e) => {
-          //   if (e.key === "Enter") {
-          //     setShowModal(true);
-          //   }
-          // }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              setShowModal(true);
+            }
+          }}
         >
           <MenuIcon />
         </div>

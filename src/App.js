@@ -11,8 +11,9 @@ import Box from "./components/Box/Box";
 import Benefits from "./components/Benefits/Benefits";
 import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
-import Button from "./components/Button/Button"
+import Button from "./components/Button/Button";
 import Credits from "./components/Credits/Credits";
+import Div from "./components/Div/Div";
 import { textStyle } from "./assets/styles/Variables";
 
 function App() {
@@ -32,25 +33,33 @@ function App() {
         />
         <Slider />
         <LayoutBgChanger>
-          <div style={textStyle}>Top destinations:</div>
+          <Div style={textStyle}>Top destinations:</Div>
           <Offer id="0">
-            <Button title="Sign in" position="vertical"/>
+            <Button title="Sign in" position="vertical" idTitle="0" link="/" />
           </Offer>
           <Offer id="1">
-            <Button title="Sign in" position="vertical"/>
+            <Button title="Sign in" position="vertical" idTitle="1" link="/" />
           </Offer>
           <Offer id="2">
-            <Button title="Sign in" position="vertical"/>
+            <Button title="Sign in" position="vertical" idTitle="2" link="/" />
           </Offer>
-          <Headline id="academy" title="Join to ours surfing academy!" desc="Worldwide academy, guarantee of great fun. We will teach you everything." />
+          <Headline
+            id="academy"
+            title="Join to ours surfing academy!"
+            desc="Worldwide academy, guarantee of great fun. We will teach you everything."
+          />
         </LayoutBgChanger>
         <Box>
-          <Button title="Sign in"/>
+          <Button
+            title="Sign in"
+            ariaName="Join to ours surfing academy"
+            link="/"
+          />
         </Box>
         <Benefits />
       </Main>
       <Credits showCredits={showCredits} setShowCredits={setShowCredits} />
-      <Footer />
+      <Footer setShowCredits={setShowCredits} />
     </Layout>
   );
 }

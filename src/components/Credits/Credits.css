@@ -5,6 +5,8 @@
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
+  -webkit-animation: showCreditsAnimation 0.5s;
+          animation: showCreditsAnimation 0.5s;
 }
 .credits__content {
   width: 60%;
@@ -12,7 +14,30 @@
   background-color: rgb(255, 255, 255);
   text-align: center;
   box-shadow: 0 5px 15px 0 rgb(0, 0, 0);
+  -webkit-animation: showCreditsAnimation 0.5s;
+          animation: showCreditsAnimation 0.5s;
 }
 .credits.active {
   display: flex;
+}
+.credits .exit-btn {
+  cursor: pointer;
+}
+
+@-webkit-keyframes showCreditsAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showCreditsAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=Credits.css.map */

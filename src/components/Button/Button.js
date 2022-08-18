@@ -1,7 +1,9 @@
 import React from "react";
 import "./Button.css";
+import { offers as data } from "../../data/data";
 
-const Button = ({ title, position }) => {
+const Button = ({ title, position, link, ariaName, idTitle }) => {
+  const aria = data[idTitle]?.title || ariaName;
   return (
     <div
       className={
@@ -13,9 +15,9 @@ const Button = ({ title, position }) => {
       <h2>{title}</h2>
       <a
         role="button"
-        aria-labelledby={title}
+        aria-label={aria}
         className="fill-container"
-        href="/"
+        href={link}
       >
         {" "}
       </a>

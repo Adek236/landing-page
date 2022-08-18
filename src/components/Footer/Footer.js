@@ -6,24 +6,24 @@ import GoogleIcon from '@mui/icons-material/Google';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-const Footer = () => {
+const Footer = ({ setShowCredits }) => {
   return (
     <footer 
     className="footer flex-center">
       <div className="footer__nav">
         <div className="footer__nav__copyright">2022 ALL RIGHTS RESERVED.</div>
-        <nav aria-label="Third">
+        <nav aria-label="Secondary">
           <ul>
             <li>
               <div
                 tabIndex="0"
-
-                // onClick={() => setShowCredit(true)}
-                // onKeyDown={(e) => {
-                //   if (e.key === "Enter") {
-                //     setShowCredit(true);
-                //   }
-                // }}
+                className="credits-btn"
+                onClick={() => setShowCredits(true)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    setShowCredits(true);
+                  }
+                }}
               >
                 Credits
               </div>
@@ -44,7 +44,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="footer__socials flex-center">
-        <nav aria-label="Secondary">
+        <nav aria-label="Third">
           <ul>
             <li>
               <a role="button" aria-label="Facebook" href="/">
@@ -62,17 +62,17 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a role="button" aria-label="Twitter" href="/">
+              <a role="button" aria-label="Google" href="/">
                 <GoogleIcon />
               </a>
             </li>
             <li>
-              <a role="button" aria-label="Twitter" href="/">
+              <a role="button" aria-label="Linked in" href="/">
                 <LinkedInIcon />
               </a>
             </li>
             <li>
-              <a role="button" aria-label="Twitter" href="/">
+              <a role="button" aria-label="Youtube" href="/">
                 <YouTubeIcon />
               </a>
             </li>

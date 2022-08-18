@@ -1,17 +1,37 @@
+import { useRef } from "react";
 import "./Credits.css";
+import ClearIcon from "@mui/icons-material/Clear";
 
-const Credits = ({showCredits, setShowCredits}) => {
+const Credits = ({ showCredits, setShowCredits }) => {
+  const creditsRef = useRef(null);
   return (
-    <div className={showCredits? "credits flex-center active" : "credits flex-center"}>
+    <div
+      className={
+        showCredits ? "credits flex-center active" : "credits flex-center"
+      }
+      onAnimationEnd={() => creditsRef.current.focus()}
+    >
       <div className="credits__content flex-center">
         <ul>
-            <li onClick={() => setShowCredits(false)}>
-                X
-            </li>
+          <li
+            ref={creditsRef}
+            tabIndex="0"
+            role="button"
+            aria-label="Close modal"
+            className="exit-btn"
+            onClick={() => setShowCredits(false)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                setShowCredits(false);
+              }
+            }}
+          >
+            <ClearIcon />
+          </li>
           <li>
-            Image by 
+            Image by
             <a href="https://pixabay.com/users/julius_silver-4371822/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3609863">
-              Julius Silver 
+              Julius Silver
             </a>
             from
             <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3609863">
@@ -49,7 +69,14 @@ const Credits = ({showCredits, setShowCredits}) => {
             </a>
           </li>
           <li>
-            <a href="https://www.pexels.com/photo/brown-wooden-dock-near-brown-wooden-kayak-in-water-547119/">
+            <a
+              onKeyDown={(e) => {
+                if (e.key === "Tab") {
+                  creditsRef.current.focus();
+                }
+              }}
+              href="https://www.pexels.com/photo/brown-wooden-dock-near-brown-wooden-kayak-in-water-547119/"
+            >
               Photo by Krivec Ales
             </a>
           </li>

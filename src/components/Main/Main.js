@@ -45,11 +45,13 @@ const Main = ({ children }) => {
           style={{
             display: `${isVideoWindow ? "flex" : "none"}`,
           }}
+          title="Ocean beach with mountains"
           autoPlay
           loop
           muted
         >
           <source src={videoBeachBackground} type="video/mp4" />
+          Sorry, your browser doesn't support embedded videos.
         </video>
         <div className="main__section__container">
           <div className="main__section__container__desc flex-center">

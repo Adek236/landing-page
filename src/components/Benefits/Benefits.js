@@ -1,19 +1,27 @@
 import "./Benefits.css";
-import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
-import PaymentsIcon from '@mui/icons-material/Payments';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import BookmarkAddedIcon from "@mui/icons-material/BookmarkAdded";
+import PaymentsIcon from "@mui/icons-material/Payments";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+
 const Benefits = () => {
   return (
     <div className="benefits flex-center">
-      <section id="news">
+      <section>
         <ul>
           <li>
-            <div><BookmarkAddedIcon/></div>
+            <div>
+              <BookmarkAddedIcon />
+            </div>
             <h3>Secure booking</h3>
-            <p>When you book a tour in our office, you will get quick confirmation of payment and seats.</p>
+            <p>
+              When you book a tour in our office, you will get quick
+              confirmation of payment and seats.
+            </p>
           </li>
           <li>
-            <div><AttachMoneyIcon/></div>
+            <div>
+              <AttachMoneyIcon />
+            </div>
             <h3>Price guarantee</h3>
             <p>
               Tours cost exactly as much as with the organizers. Compare and
@@ -21,9 +29,14 @@ const Benefits = () => {
             </p>
           </li>
           <li>
-            <div><PaymentsIcon/></div>
+            <div>
+              <PaymentsIcon />
+            </div>
             <h3>Convenient payments</h3>
-            <p>You will pay for the tour as you are comfortable, that is, by traditional bank transfer, online payment or cash.</p>
+            <p>
+              You will pay for the tour as you are comfortable, that is, by
+              traditional bank transfer, online payment or cash.
+            </p>
           </li>
         </ul>
       </section>
