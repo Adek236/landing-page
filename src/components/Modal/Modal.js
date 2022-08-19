@@ -1,28 +1,27 @@
-import { useRef } from "react";
+// import { useRef } from "react";
 import "./Modal.css";
 
-const Modal = ({ showModal, setShowModal }) => {
-  const modalRef = useRef(null);
+const Modal = ({ showModal, setShowModal, modalRef }) => {
   return (
     <div
-      onTransitionEnd={() => modalRef.current.focus()}
+      // onTransitionEnd={() => modalRef.current.focus()}
       className={showModal ? "modal active" : "modal"}
     >
       <nav aria-label="Priority">
         <ul className="flex-center">
-          <li>
-            <a ref={modalRef} onClick={() => setShowModal(false)} href="#top">
-              TOP
+          <li ref={modalRef} tabIndex="0">
+            <a onClick={() => setShowModal(false)} href="#top">
+              Top
             </a>
           </li>
           <li>
             <a onClick={() => setShowModal(false)} href="/">
-              LAST MINUTE
+              Last Minute
             </a>
           </li>
           <li>
             <a onClick={() => setShowModal(false)} href="#academy">
-              ACADEMY
+              Academy
             </a>
           </li>
           <li>
@@ -35,7 +34,7 @@ const Modal = ({ showModal, setShowModal }) => {
               onClick={() => setShowModal(false)}
               href="#comments"
             >
-              COMMENTS
+              Comments
             </a>
           </li>
         </ul>

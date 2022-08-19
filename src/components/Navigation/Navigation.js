@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import DiamondIcon from "@mui/icons-material/Diamond";
 import PersonIcon from "@mui/icons-material/Person";
 
-function NavBar({ setShowModal }) {
+function NavBar({ showModal, setShowModal, modalRef }) {
   const toggleShowModal = () => {
     setShowModal((prev) => !prev);
   };
@@ -28,7 +28,10 @@ function NavBar({ setShowModal }) {
           onClick={() => toggleShowModal()}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
-              setShowModal(true);
+              toggleShowModal();
+            }
+            if (e.key === "Tab" && showModal) {
+              modalRef.current.focus();
             }
           }}
         >
@@ -49,20 +52,20 @@ function NavBar({ setShowModal }) {
         </div>
         <ul>
           <li>
-            <a href="#top">TOP</a>
+            <a href="#top">Top</a>
           </li>
           <li>
-            <a href="/">LAST MINUTE</a>
+            <a href="/">Last Minute</a>
           </li>
           <li>
-            <a href="#academy">ACADEMY</a>
+            <a href="#academy">Academy</a>
           </li>
           <li>
-            <a href="#comments">COMMENTS</a>
+            <a href="#comments">Comments</a>
           </li>
           <li>
             <a href="/" className="flex-center">
-              LOGIN <PersonIcon />
+              Login <PersonIcon />
             </a>
           </li>
         </ul>

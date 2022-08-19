@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Layout from "./components/Layout/Layout";
 import LayoutBgChanger from "./components/LayoutBgChanger/LayoutBgChanger";
 import Header from "./components/Header/Header";
@@ -19,11 +19,12 @@ import { textStyle } from "./assets/styles/Variables";
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [showCredits, setShowCredits] = useState(false);
+  const modalRef = useRef(null);
   return (
     <Layout>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <Modal showModal={showModal} setShowModal={setShowModal} modalRef={modalRef}/>
       <Header>
-        <Navigation setShowModal={setShowModal} />
+        <Navigation showModal={showModal} setShowModal={setShowModal} modalRef={modalRef}/>
       </Header>
       <Main>
         <Headline

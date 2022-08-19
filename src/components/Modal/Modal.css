@@ -1,4 +1,5 @@
 .modal {
+  display: none;
   top: 3.5rem;
   right: 0;
   z-index: 101;
@@ -8,12 +9,12 @@
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
   letter-spacing: 0.05rem;
   font-family: "Luckiest Guy", "Open Sans", "Arial", "Helvetica", cursive;
-  transform: translateY(-110%);
-  transition: all 500ms;
 }
 .modal.active {
+  display: block;
   transform: translateY(0);
-  transition: all 500ms;
+  -webkit-animation: showModalAnimation 500ms;
+          animation: showModalAnimation 500ms;
 }
 .modal > * ul {
   flex-direction: column;
@@ -21,4 +22,25 @@
 }
 .modal > * ul > li {
   padding-bottom: 0.3rem;
+}
+.modal > * ul > li > a {
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes showModalAnimation {
+  0% {
+    transform: translateY(-110%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes showModalAnimation {
+  0% {
+    transform: translateY(-110%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=Modal.css.map */

@@ -22,7 +22,16 @@ const Slider = () => {
   return (
     <div className="slider">
       <section>
-        <div className="slider__btn flex-center" onClick={() => viewElement(0)}>
+        <div
+          tabIndex="0"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              viewElement(0);
+            }
+          }}
+          className="slider__btn flex-center"
+          onClick={() => viewElement(0)}
+        >
           <ArrowBackIosNewIcon />
         </div>
         <ul ref={ref}>
@@ -46,8 +55,14 @@ const Slider = () => {
           })}
         </ul>
         <div
+          tabIndex="0"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              viewElement(dataLength - 1);
+            }
+          }}
           className="slider__btn flex-center"
-          onClick={() => viewElement(dataLength-1)}
+          onClick={() => viewElement(dataLength - 1)}
         >
           <ArrowForwardIosIcon />
         </div>
@@ -57,11 +72,17 @@ const Slider = () => {
           {Array.from({ length: dataLength }).map((el, index) => {
             return (
               <li
+                tabIndex="0"
                 key={index}
                 className={
                   sliderIndex === index ? "slider__dots active" : "slider__dots"
                 }
                 onClick={() => viewElement(index)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    viewElement(index);
+                  }
+                }}
               ></li>
             );
           })}
