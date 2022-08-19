@@ -1,1 +1,1 @@
-{"version":3,"sources":["Headline.scss","Headline.css","../../assets/styles/Variables.scss"],"names":[],"mappings":"AAEA;EACE,iBAAA;EACA,eAAA;ACDF;ADEE;EACE,sBAAA;ACAJ;ADCI;EACE,kBAAA;EACA,yBEHe;ADIrB;ADEE;EAVF;IAWI,iBAAA;ECCF;AACF","file":"Headline.css"}
+{"version":3,"sources":["Headline.scss","Headline.css","../../assets/styles/Variables.scss"],"names":[],"mappings":"AAEA;EACE,iBAAA;EACA,eAAA;ACDF;ADEE;EACE,UAAA;EACA,0BAAA;EACA,sBAAA;ACAJ;ADCI;EACE,UAAA;EACA,yBAAA;EACA,kBAAA;ACCN;ADCI;EACE,kBAAA;EACA,yBEVe;ADWrB;ADEE;EAjBF;IAkBI,iBAAA;ECCF;AACF","file":"Headline.css"}

@@ -22,9 +22,17 @@ function App() {
   const modalRef = useRef(null);
   return (
     <Layout>
-      <Modal showModal={showModal} setShowModal={setShowModal} modalRef={modalRef}/>
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        modalRef={modalRef}
+      />
       <Header>
-        <Navigation showModal={showModal} setShowModal={setShowModal} modalRef={modalRef}/>
+        <Navigation
+          showModal={showModal}
+          setShowModal={setShowModal}
+          modalRef={modalRef}
+        />
       </Header>
       <Main>
         <Headline

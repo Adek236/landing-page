@@ -4,7 +4,14 @@
   font-size: 1.5rem;
   padding: 4rem 0;
   > section {
+    opacity: 0;
+    transform: translateY(50%);
     flex-direction: column;
+    &.active {
+      opacity: 1;
+      transform: translateY(0%);
+      transition: all 1s;
+    }
     > p {
       text-align: center;
       color: $mainFontColorThird;

@@ -1,11 +1,11 @@
 import "./Headline.css";
-const Headline = ({ id, classStyle, title, desc }) => {
+import { useInView } from "react-intersection-observer";
+
+const Headline = ({ id, title, desc }) => {
+  const { ref: myRef, inView: myElementIsVisible } = useInView({triggerOnce: true});
   return (
-    <div
-      id={id}
-      className={classStyle === undefined ? "headline flex-center" : classStyle}
-    >
-      <section className="flex-center">
+    <div ref={myRef} id={id} className="headline flex-center">
+      <section  className={`flex-center ${myElementIsVisible ? "active" : ""}`}>
         <h2>{title}</h2>
         <p>{desc}</p>
       </section>

@@ -24,6 +24,7 @@ const Slider = () => {
       <section>
         <div
           tabIndex="0"
+          aria-label="Comments number 1, 2, 3"
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               viewElement(0);
@@ -56,6 +57,7 @@ const Slider = () => {
         </ul>
         <div
           tabIndex="0"
+          aria-label="Comments number 4, 5, 6"
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               viewElement(dataLength - 1);
@@ -73,6 +75,7 @@ const Slider = () => {
             return (
               <li
                 tabIndex="0"
+                aria-label={`Comment number ${index+1}`} 
                 key={index}
                 className={
                   sliderIndex === index ? "slider__dots active" : "slider__dots"
