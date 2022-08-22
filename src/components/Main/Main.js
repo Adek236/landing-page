@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./Main.css";
+import { useInView } from "react-intersection-observer";
 import { useWindowWidth } from "../../controllers/controllers";
 import videoBeachBackground from "../../assets/images/beach2.mp4";
 import beachBackground from "../../assets/images/beach3.jpg";
@@ -9,6 +10,11 @@ const Main = ({ children }) => {
   const [slideNum, setSlideNum] = useState(1);
   const mainRef = useRef(null);
   const sectionRef = useRef(null);
+  const { ref: descRef, inView: myElementIsVisible } = useInView({
+    triggerOnce: true,
+    trackVisibility: true,
+    delay: 100,
+  });
   const { windowWidth } = useWindowWidth(mainRef);
   const { windowHeight } = useWindowWidth(sectionRef);
   const crossWindow = windowWidth / windowHeight;
@@ -55,20 +61,31 @@ const Main = ({ children }) => {
         </video>
         <div className="main__section__container">
           <div className="main__section__container__desc flex-center">
-            <div className="main__section__container__desc__prev-title text-shadow">
+            <div
+              ref={descRef}
+              className={`main__section__container__desc__prev-title text-shadow ${
+                myElementIsVisible ? "activeObs" : ""
+              }`}
+            >
               {data[0].prevTitle}
             </div>
-            <h1 className="text-shadow">{data[0].title}</h1>
+            <h1
+              ref={descRef}
+              className={`text-shadow ${myElementIsVisible ? "activeObs" : ""}`}
+            >
+              {data[0].title}
+            </h1>
             <div className="main__section__container__desc__slider text-shadow">
               {data[0].desc.map((desc, index) => {
                 return (
                   <div
                     key={index}
-                    className={
+                    ref={descRef}
+                    className={`${
                       slideNum === index + 1
                         ? "main__section__container__desc__slider--show"
                         : "main__section__container__desc__slider--hide"
-                    }
+                    } ${myElementIsVisible ? "activeObs" : ""}`}
                   >
                     {desc}
                   </div>

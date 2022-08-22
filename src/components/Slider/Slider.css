@@ -9,6 +9,13 @@
 .slider > section {
   display: flex;
   width: 100%;
+  transform: scale(0.5);
+  opacity: 0;
+}
+.slider > section.activeObs {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 1s;
 }
 .slider > section .slider__btn {
   min-width: 10%;
@@ -61,11 +68,18 @@
 }
 .slider > nav {
   width: 100%;
+  transform: scale(0.5);
+  opacity: 0;
 }
 @media (min-width: 1280px) {
   .slider > nav {
     display: none;
   }
+}
+.slider > nav.activeObs {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 1s;
 }
 .slider > nav > ul {
   height: 2rem;

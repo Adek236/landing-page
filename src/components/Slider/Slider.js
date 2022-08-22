@@ -4,15 +4,21 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import StarIcon from "@mui/icons-material/Star";
 import { comments as data } from "../../data/data";
+import { useInView } from "react-intersection-observer";
 
 const Slider = () => {
+  const { ref: sliderRef, inView: myElementIsVisible } = useInView({
+    triggerOnce: true,
+    trackVisibility: true,
+    delay: 300,
+  });
   const [sliderIndex, setSliderIndex] = useState(0);
-  const ref = useRef(null);
+  const commentsRef = useRef(null);
   const dataLength = data.length;
 
   const viewElement = (index) => {
     setSliderIndex(index);
-    ref.current.children[index].scrollIntoView({
+    commentsRef.current.children[index].scrollIntoView({
       behavior: "smooth",
       block: "nearest",
       inline: "center",
@@ -20,8 +26,8 @@ const Slider = () => {
   };
 
   return (
-    <div className="slider">
-      <section>
+    <div ref={sliderRef} className="slider">
+      <section className={`${myElementIsVisible ? "activeObs" : ""}`}>
         <div
           tabIndex="0"
           aria-label="Comments number 1, 2, 3"
@@ -35,7 +41,7 @@ const Slider = () => {
         >
           <ArrowBackIosNewIcon />
         </div>
-        <ul ref={ref}>
+        <ul ref={commentsRef}>
           {data.map((data) => {
             return (
               <li id={data.id} key={data.id} className="flex-center">
@@ -69,7 +75,7 @@ const Slider = () => {
           <ArrowForwardIosIcon />
         </div>
       </section>
-      <nav>
+      <nav className={`${myElementIsVisible ? "activeObs" : ""}`}>
         <ul className="flex-center">
           {Array.from({ length: dataLength }).map((el, index) => {
             return (

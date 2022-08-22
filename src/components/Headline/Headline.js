@@ -2,10 +2,14 @@ import "./Headline.css";
 import { useInView } from "react-intersection-observer";
 
 const Headline = ({ id, title, desc }) => {
-  const { ref: myRef, inView: myElementIsVisible } = useInView({triggerOnce: true});
+  const { ref: headlineRef, inView: myElementIsVisible } = useInView({
+    triggerOnce: true,
+    trackVisibility: true,
+    delay: 300,
+  });
   return (
-    <div ref={myRef} id={id} className="headline flex-center">
-      <section  className={`flex-center ${myElementIsVisible ? "active" : ""}`}>
+    <div ref={headlineRef} id={id} className="headline flex-center">
+      <section className={`flex-center ${myElementIsVisible ? "activeObs" : ""}`}>
         <h2>{title}</h2>
         <p>{desc}</p>
       </section>

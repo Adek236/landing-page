@@ -8,6 +8,13 @@
     > section {
       display: flex;
       width: 100%;
+      transform: scale(0.5);
+      opacity: 0;
+      &.activeObs {
+        opacity: 1;
+        transform: scale(1);
+        transition: all 1s;
+      }
       .slider__btn {
         min-width: 10%;
         > svg {
@@ -56,9 +63,16 @@
   }
   > nav {
     width: 100%;
-    @media (min-width: $newsBreakPointLarge) {
-      display: none;
-    }
+    transform: scale(0.5);
+      opacity: 0;
+      @media (min-width: $newsBreakPointLarge) {
+        display: none;
+      }
+      &.activeObs {
+        opacity: 1;
+        transform: scale(1);
+        transition: all 1s;
+      }
     > ul {
       height: 2rem;
       > li {

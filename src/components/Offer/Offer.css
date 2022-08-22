@@ -15,11 +15,18 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(30%);
 }
 @media (min-width: 993px) {
   .offer__section {
     flex-direction: row;
   }
+}
+.offer__section.activeObs {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 500ms;
 }
 .offer__section__image {
   width: 100%;
@@ -45,9 +52,14 @@
   flex-direction: column;
   padding: 1.5rem;
   text-align: center;
+  transform: translateX(100%);
 }
 @media (min-width: 993px) {
   .offer__section__desc {
     width: 50%;
   }
+}
+.offer__section__desc.activeObs {
+  transform: translateX(0);
+  transition: all 500ms;
 }/*# sourceMappingURL=Offer.css.map */

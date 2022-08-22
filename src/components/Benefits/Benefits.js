@@ -2,13 +2,19 @@ import "./Benefits.css";
 import BookmarkAddedIcon from "@mui/icons-material/BookmarkAdded";
 import PaymentsIcon from "@mui/icons-material/Payments";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import { useInView } from "react-intersection-observer";
 
 const Benefits = () => {
+  const { ref: benefitsRef, inView: myElementIsVisible } = useInView({
+    triggerOnce: true,
+    trackVisibility: true,
+    delay: 400,
+  });
   return (
     <div className="benefits flex-center">
-      <section>
+      <section ref={benefitsRef} className={`${myElementIsVisible ? "activeObs" : ""}`}>
         <ul>
-          <li>
+          <li >
             <div>
               <BookmarkAddedIcon />
             </div>

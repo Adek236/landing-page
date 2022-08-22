@@ -9,6 +9,13 @@
   > section {
     width: 100%;
     padding-inline: 1rem;
+    opacity: 0;
+    transform: translateY(20%);
+    &.activeObs {
+      opacity: 1;
+      transform: translateY(0%);
+      transition: all 1s;
+    }
     > ul {
       display: flex;
       flex-wrap: wrap;
@@ -25,7 +32,7 @@
         text-align: center;
         font-size: 0.8rem;
         @media (min-width: $newsBreakPointMedium) {
-          font-size: 1.0rem;
+          font-size: 1rem;
           width: 250px;
         }
       }

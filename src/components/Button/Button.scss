@@ -7,6 +7,11 @@
   border-radius: 1rem 1rem 0 0;
   cursor: pointer;
   box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.5);
+  transform: translateY(100%);
+  &.activeObs {
+    transform: translateY(0);
+    transition: all 500ms;
+  }
   &:hover {
     background-color: $btnColorPrimaryHover;
     transform: scale(1.2);
@@ -19,5 +24,10 @@
   &.vertical {
     border-radius: 0 1rem 1rem 0;
     box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.6);
+    transform: translateX(-100%);
+    &.activeObs {
+        transform: translateX(0);
+        transition: all 500ms;
+      }
   }
 }

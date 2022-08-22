@@ -1,0 +1,13 @@
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateY(50%);
+  &.activeObs {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 1s;
+  }
+}

@@ -16,6 +16,13 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    opacity: 0;
+    transform: translateY(20%);
+    &.activeObs {
+      opacity: 1;
+      transform: translateY(0%);
+      transition: all 1s;
+    }
     &__copyright {
       text-align: center;
     }
@@ -23,6 +30,7 @@
       display: flex;
       flex-grow: 1;
       padding: 0.5rem;
+
       > ul {
         display: flex;
         flex-wrap: wrap;
@@ -40,6 +48,13 @@
     flex-direction: column;
     width: 100%;
     padding: 1rem;
+    opacity: 0;
+    transform: translateY(20%);
+    &.activeObs {
+      opacity: 1;
+      transform: translateY(0%);
+      transition: all 1s;
+    }
     > * ul {
       display: flex;
       > li {

@@ -14,7 +14,6 @@ import Modal from "./components/Modal/Modal";
 import Button from "./components/Button/Button";
 import Credits from "./components/Credits/Credits";
 import Div from "./components/Div/Div";
-import { textStyle } from "./assets/styles/Variables";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -42,7 +41,7 @@ function App() {
         />
         <Slider />
         <LayoutBgChanger>
-          <Div style={textStyle}>Top destinations:</Div>
+          <Div>Top destinations:</Div>
           <Offer id="0">
             <Button title="Sign in" position="vertical" idTitle="0" link="/" />
           </Offer>
