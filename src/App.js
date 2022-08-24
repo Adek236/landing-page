@@ -19,18 +19,21 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [showCredits, setShowCredits] = useState(false);
   const modalRef = useRef(null);
+  const navigationRef = useRef(null);
   return (
     <Layout>
       <Modal
         showModal={showModal}
         setShowModal={setShowModal}
         modalRef={modalRef}
+        navigationRef={navigationRef}
       />
       <Header>
         <Navigation
           showModal={showModal}
           setShowModal={setShowModal}
           modalRef={modalRef}
+          navigationRef={navigationRef}
         />
       </Header>
       <Main>

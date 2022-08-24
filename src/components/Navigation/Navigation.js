@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import DiamondIcon from "@mui/icons-material/Diamond";
 import PersonIcon from "@mui/icons-material/Person";
 
-function NavBar({ showModal, setShowModal, modalRef }) {
+function NavBar({ showModal, setShowModal, modalRef, navigationRef }) {
   const toggleShowModal = () => {
     setShowModal((prev) => !prev);
   };
@@ -25,6 +25,7 @@ function NavBar({ showModal, setShowModal, modalRef }) {
           role="button"
           aria-label="Open modal"
           tabIndex="0"
+          ref={navigationRef}
           onClick={() => toggleShowModal()}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
