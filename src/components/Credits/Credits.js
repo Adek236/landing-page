@@ -4,14 +4,22 @@ import ClearIcon from "@mui/icons-material/Clear";
 
 const Credits = ({ showCredits, setShowCredits }) => {
   const creditsRef = useRef(null);
+  const lastLinkRef = useRef(null);
   return (
     <div
+      aria-hidden={showCredits ? "false" : ""}
       className={
         showCredits ? "credits flex-center active" : "credits flex-center"
       }
       onAnimationEnd={() => creditsRef.current.focus()}
     >
-      <div className="credits__content flex-center">
+      <div
+        aria-modal="true"
+        role="dialog"
+        aria-label="Modal is on"
+        aria-hidden={showCredits ? "false" : "true"}
+        className="credits__content flex-center"
+      >
         <ul>
           <li
             ref={creditsRef}
@@ -23,6 +31,10 @@ const Credits = ({ showCredits, setShowCredits }) => {
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 setShowCredits(false);
+              }
+              if (e.key === "Tab" && e.shiftKey) {
+                lastLinkRef.current.focus();
+                console.log(creditsRef);
               }
             }}
           >
@@ -70,8 +82,9 @@ const Credits = ({ showCredits, setShowCredits }) => {
           </li>
           <li>
             <a
+              ref={lastLinkRef}
               onKeyDown={(e) => {
-                if (e.key === "Tab") {
+                if (e.key === "Tab" && !e.shiftKey) {
                   creditsRef.current.focus();
                 }
               }}

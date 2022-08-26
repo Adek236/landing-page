@@ -1,38 +1,27 @@
-// import { useState } from "react";
 import "./Modal.css";
 
 const Modal = ({ showModal, setShowModal, modalRef, navigationRef }) => {
-  // const [tabKey, setTabKey] = useState(false);
-  // const [shiftKey, setShiftKey] = useState(false);
-
-  // const keyModify = (e, wichKeyEvent) => {
-  //   console.log("ekey ", e.key)
-  //   if (e.key === "Shift") {
-  //     wichKeyEvent === "down" ? setShiftKey(true): setShiftKey(false);
-  //   }
-  //   if (e.key === "Tab") {
-  //     wichKeyEvent === "down" ? setTabKey(true): setTabKey(false);
-  //   }
-  //   if (tabKey === true && shiftKey === true)
-  //     console.log("hi");
-  //     console.log(shiftKey, tabKey)
-  // }
-
   return (
     <div
-      // onTransitionEnd={() => modalRef.current.focus()}
+      aria-modal="true"
+      role="dialog"
+      aria-label="Modal is on"
+      aria-hidden={showModal ? "false" : "true"}
       className={showModal ? "modal active" : "modal"}
     >
       <nav aria-label="Priority">
         <ul className="flex-center">
-          <li
-            ref={modalRef}
-            tabIndex="0"
-            // onFocus={()=> navigationRef.current.focus()}
+          <li 
+          ref={modalRef} 
+          tabIndex="0"
           >
             <a
-              // onKeyDown={(e) => keyModify(e, "down")}
-              // onKeyUp={(e) => keyModify(e, "up")}
+              onKeyDown={(e) => {
+                if (e.key === "Tab" && e.shiftKey) {
+                  navigationRef.current.focus();
+                  // console.log("hi");
+                }
+              }}
               onClick={() => setShowModal(false)}
               href="#top"
             >
@@ -50,15 +39,7 @@ const Modal = ({ showModal, setShowModal, modalRef, navigationRef }) => {
             </a>
           </li>
           <li>
-            <a
-              // onKeyDown={(e) => {
-              //   if (e.key === "Tab") {
-              //     modalRef.current.focus();
-              //   }
-              // }}
-              onClick={() => setShowModal(false)}
-              href="#comments"
-            >
+            <a onClick={() => setShowModal(false)} href="#comments">
               Comments
             </a>
           </li>

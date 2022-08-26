@@ -5,8 +5,10 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import StarIcon from "@mui/icons-material/Star";
 import { comments as data } from "../../data/data";
 import { useInView } from "react-intersection-observer";
+import { useWindowWidth } from "../../controllers/controllers";
 
 const Slider = () => {
+  const sliderWidthRef = useRef(null);
   const { ref: sliderRef, inView: myElementIsVisible } = useInView({
     triggerOnce: true,
     trackVisibility: true,
@@ -25,11 +27,18 @@ const Slider = () => {
     });
   };
 
+  const { windowWidth } = useWindowWidth(sliderWidthRef);
+
   return (
     <div ref={sliderRef} className="slider">
-      <section className={`${myElementIsVisible ? "activeObs" : ""}`}>
+      <section
+        ref={sliderWidthRef}
+        className={`${myElementIsVisible ? "activeObs" : ""}`}
+      >
         <div
-          tabIndex="0"
+          tabIndex={windowWidth >= 1010 ? "0" : "-1"}
+          aria-hidden={windowWidth >= 1010 ? "false" : "true"}
+          role="button"
           aria-label="Comments number 1, 2, 3"
           onKeyDown={(e) => {
             if (e.key === "Enter") {
@@ -62,8 +71,10 @@ const Slider = () => {
           })}
         </ul>
         <div
-          tabIndex="0"
+          tabIndex={windowWidth >= 1010 ? "0" : "-1"}
+          aria-hidden={windowWidth >= 1010 ? "false" : "true"}
           aria-label="Comments number 4, 5, 6"
+          role="button"
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               viewElement(dataLength - 1);
@@ -81,7 +92,7 @@ const Slider = () => {
             return (
               <li
                 tabIndex="0"
-                aria-label={`Comment number ${index+1}`} 
+                aria-label={`Comment number ${index + 1}`}
                 key={index}
                 className={
                   sliderIndex === index ? "slider__dots active" : "slider__dots"
