@@ -8,18 +8,19 @@ const Modal = ({ showModal, setShowModal, modalRef, navigationRef }) => {
       aria-label="Modal is on"
       aria-hidden={showModal ? "false" : "true"}
       className={showModal ? "modal active" : "modal"}
+      onAnimationEnd={() => modalRef.current.firstElementChild.focus()}
     >
       <nav aria-label="Priority">
         <ul className="flex-center">
           <li 
-          ref={modalRef} 
-          tabIndex="0"
+          tabIndex="0" 
+          ref={modalRef}
           >
             <a
               onKeyDown={(e) => {
                 if (e.key === "Tab" && e.shiftKey) {
+                  console.log(navigationRef);
                   navigationRef.current.focus();
-                  // console.log("hi");
                 }
               }}
               onClick={() => setShowModal(false)}

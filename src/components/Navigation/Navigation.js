@@ -31,7 +31,7 @@ function NavBar({ showModal, setShowModal, modalRef, navigationRef }) {
             if (e.key === "Enter") {
               toggleShowModal();
             }
-            if (e.key === "Tab" && showModal) {
+            if (e.key === "Tab" && showModal && !e.shiftKey) {
               modalRef.current.focus();
             }
           }}

@@ -21,7 +21,6 @@ const Box = ({ children }) => {
           backgroundImage: `url(${windowWidth > 640 ? fall1280 : fall})`,
         }}
         className={`box__content flex-center ${myElementIsVisible ? "activeObs" : ""}`}
-        // className="box__content flex-center"
       >
         <div className="box__children">{children}</div>
       </div>
