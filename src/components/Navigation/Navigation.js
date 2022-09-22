@@ -1,7 +1,8 @@
 import "./Navigation.css";
+import { GiPalmTree } from "react-icons/gi";
 import MenuIcon from "@mui/icons-material/Menu";
-import DiamondIcon from "@mui/icons-material/Diamond";
 import PersonIcon from "@mui/icons-material/Person";
+
 
 function NavBar({ showModal, setShowModal, modalRef, navigationRef }) {
   const toggleShowModal = () => {
@@ -18,7 +19,7 @@ function NavBar({ showModal, setShowModal, modalRef, navigationRef }) {
         </div>
         <div>
           <a role="button" aria-label="Home page" href="/">
-            <DiamondIcon />
+            <GiPalmTree />
           </a>
         </div>
         <div
@@ -48,7 +49,7 @@ function NavBar({ showModal, setShowModal, modalRef, navigationRef }) {
             href="/"
             className="flex-center"
           >
-            <DiamondIcon />
+            <GiPalmTree />
           </a>
         </div>
         <ul>
