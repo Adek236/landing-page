@@ -34,7 +34,6 @@ const Credits = ({ showCredits, setShowCredits }) => {
               }
               if (e.key === "Tab" && e.shiftKey) {
                 lastLinkRef.current.focus();
-                console.log(creditsRef);
               }
             }}
           >

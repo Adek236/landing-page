@@ -3,7 +3,6 @@ import { GiPalmTree } from "react-icons/gi";
 import MenuIcon from "@mui/icons-material/Menu";
 import PersonIcon from "@mui/icons-material/Person";
 
-
 function NavBar({ showModal, setShowModal, modalRef, navigationRef }) {
   const toggleShowModal = () => {
     setShowModal((prev) => !prev);
@@ -32,7 +31,7 @@ function NavBar({ showModal, setShowModal, modalRef, navigationRef }) {
             if (e.key === "Enter") {
               toggleShowModal();
             }
-            if (e.key === "Tab" && showModal) {
+            if (e.key === "Tab" && showModal && !e.shiftKey) {
               modalRef.current.focus();
             }
           }}
